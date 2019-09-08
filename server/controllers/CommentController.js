@@ -1,9 +1,7 @@
 import express from 'express'
-import BlogService from '../services/BlogService'
 import CommentService from '../services/CommentService'
 import { Authorize } from '../middleware/authorize.js'
 
-let _blogService = new BlogService().repository
 let _commentService = new CommentService().repository
 
 export default class CommentController {
