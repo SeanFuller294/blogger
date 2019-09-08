@@ -1,3 +1,4 @@
+// @ts-nocheck
 import express from 'express'
 import userService from '../services/UserService';
 import { Authorize } from '../middleware/authorize'
