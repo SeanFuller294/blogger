@@ -1,6 +1,6 @@
 // @ts-nocheck
 import express from 'express'
-import userService from '../services/UserService';
+import userService from '../services/UserService'
 import { Authorize } from '../middleware/authorize'
 
 const _userService = new userService()
@@ -25,7 +25,6 @@ export default class AuthController {
         }
         try {
             //CHANGE THE PASSWORD TO A HASHED PASSWORD
-            console.log('here')
             req.body.hash = _userService.generateHash(req.body.password)
 
             //CREATE THE USER
@@ -58,7 +57,7 @@ export default class AuthController {
             res.send(user)
         }
         catch (err) {
-            res.status(400).send("Invalid Username Or Password")
+            res.status(400).send("Invalid Username Or Password login")
         }
     }
 
